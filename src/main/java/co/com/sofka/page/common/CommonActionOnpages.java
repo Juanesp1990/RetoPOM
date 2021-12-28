@@ -24,8 +24,8 @@ public class CommonActionOnpages extends BaseSikulix {
         typeWait = new WebDriverWait(driver, TEN_SECONDS.getValue());
     }
 
-    protected void waitGeneral (WebElement webElement) {
-        typeWait.until(ExpectedConditions.elementToBeClickable(webElement));
+    protected void waitGeneral (By Locator) {
+        typeWait.until(ExpectedConditions.elementToBeClickable(Locator));
     }
 
     protected void scrollDown () {
@@ -49,15 +49,24 @@ public class CommonActionOnpages extends BaseSikulix {
     }
 
     protected void click (By locator) {
-        driver.findElement(locator).click();
-    }
+        typeWait.until(ExpectedConditions.elementToBeClickable(locator)).click();
+        }
 
     protected void pathFile (By locator, String path) {
         driver.findElement(locator).sendKeys(path);
     }
 
     protected void pressEnter (By locator) {
-        driver.findElement(locator).sendKeys(Keys.ENTER);
+        typeWait.until(ExpectedConditions.elementToBeClickable(locator)).sendKeys(Keys.ENTER);
+        //driver.findElement(locator).sendKeys(Keys.ENTER);
+    }
+
+    protected void pressTab(By locator){
+        typeWait.until(ExpectedConditions.elementToBeClickable(locator)).sendKeys(Keys.TAB);
+    }
+
+    protected void arrowDowm (By locator){
+        typeWait.until(ExpectedConditions.elementToBeClickable(locator)).sendKeys(Keys.ARROW_DOWN);
     }
 
     public void scrollTo (By locator) {
@@ -69,41 +78,7 @@ public class CommonActionOnpages extends BaseSikulix {
         return driver.findElement(locator).getText();
     }
 
-    /* functions for web element*/
 
-    protected void clearText (WebElement webElement) {
-        webElement.clear();
-    }
-
-    protected void typeInto (WebElement webElement, String value) {
-        webElement.sendKeys(value);
-    }
-
-    protected void click (WebElement webElement) {
-        webElement.click();
-
-    }
-
-    protected void waitClick (WebElement webElement) {
-        typeWait.until(elementToBeClickable(webElement)).click();
-    }
-
-    protected void pathFile (WebElement webElement, String path) {
-        webElement.sendKeys(path);
-    }
-
-    protected void pressEnter (WebElement webElement) {
-        webElement.sendKeys(Keys.ENTER);
-    }
-
-    public void scrollTo (WebElement webElement) {
-        JavascriptExecutor jse = (JavascriptExecutor) driver;
-        jse.executeScript("arguments[0].scrollIntoView();", webElement);
-    }
-
-    protected String getText (WebElement webElement) {
-        return webElement.getText();
-    }
 
 }
 
