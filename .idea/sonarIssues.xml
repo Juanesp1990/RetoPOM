@@ -3,6 +3,16 @@
   <component name="issues">
     <option name="index">
       <map>
+        <entry key="$PROJECT_DIR$/../RetoPomPageFactory/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../RetoPomPageFactory/src/test/java/co/com/sofka/runner/ZonaFitTestCucumber.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../ScreenPlay/build.gradle">
           <value>
             <set />
@@ -48,6 +58,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/co/com/sofka/util/LimitTimeWait.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/co/com/sofka/util/Persona.java">
           <value>
             <set />
@@ -74,6 +89,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/test/resources/features/despegar.feature">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Downloads/automationtesting-trunk/automationtesting-trunk/RestAssuredExample/build.gradle">
           <value>
             <set />
           </value>

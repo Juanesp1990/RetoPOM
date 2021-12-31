@@ -4,8 +4,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import static co.com.sofka.util.LimitTimeWait.TEN_SECONDS;
-import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
+import static co.com.sofka.util.LimitTimeWait.THIRTY_SECONDS;
 
 public class CommonActionOnpages extends BaseSikulix {
     private final WebDriver driver;
@@ -20,12 +19,12 @@ public class CommonActionOnpages extends BaseSikulix {
 
     /*General functions*/
 
-    protected void explicitWaitInit () {
-        typeWait = new WebDriverWait(driver, TEN_SECONDS.getValue());
+    private void explicitWaitInit () {
+        typeWait = new WebDriverWait(driver, THIRTY_SECONDS.getValue());
     }
 
-    protected void waitGeneral (By Locator) {
-        typeWait.until(ExpectedConditions.elementToBeClickable(Locator));
+    protected void waitGeneral (By locator) {
+        typeWait.until(ExpectedConditions.elementToBeClickable(locator));
     }
 
     protected void scrollDown () {
@@ -58,7 +57,7 @@ public class CommonActionOnpages extends BaseSikulix {
 
     protected void pressEnter (By locator) {
         typeWait.until(ExpectedConditions.elementToBeClickable(locator)).sendKeys(Keys.ENTER);
-        //driver.findElement(locator).sendKeys(Keys.ENTER);
+
     }
 
     protected void pressTab(By locator){
@@ -77,7 +76,6 @@ public class CommonActionOnpages extends BaseSikulix {
     protected String getText (By locator) {
         return driver.findElement(locator).getText();
     }
-
 
 
 }
