@@ -15,7 +15,7 @@ public class DespegarPage extends CommonActionOnpages {
 
     /*Locators*/
     private final By selectorIda = By.xpath("//span[text()='Solo ida']");
-    private final By selectorIdaVuelta =By.xpath("//span[text()='Ida y vuelta']");
+    private final By selectorIdaVuelta = By.xpath("//span[text()='Ida y vuelta']");
 
     private final By ciudadOrigen = By.xpath("//input[@placeholder='Ingresa desde dónde viajas']");
     private final By locatorCiudad = By.xpath("/html/body/div[4]/div/div[1]/ul/li/span");
@@ -25,7 +25,7 @@ public class DespegarPage extends CommonActionOnpages {
 
     private final By fechaSalida = By.xpath("//*[@id=\"component-modals\"]/div[1]/div[1]/div[2]/div[2]/div[3]/div[28]/div");
 
-    private final By fechaRegreso =By.xpath("//*[@id=\"component-modals\"]/div[1]/div[1]/div[2]/div[2]/div[3]/div[3]/div");
+    private final By fechaRegreso = By.xpath("//*[@id=\"component-modals\"]/div[1]/div[1]/div[2]/div[2]/div[3]/div[3]/div");
 
     private final By tipoEquipaje = By.xpath("//*[@id=\"upselling-popup-position\"]/upselling-popup/div/div[2]/upselling-cards/div/div/div/upselling-card[2]/div/div[3]");
 
@@ -74,7 +74,7 @@ public class DespegarPage extends CommonActionOnpages {
 
     private final By documentoReserva = By.xpath("//*[@id=\"checkout-content\"]/div[1]/buy-component/div/form-data-revision-container/form-data-revision/div/ul/li/div[3]/span");
 
-    private final By mensajeConfirmacion =By.xpath("//h2[@class='chk-main-title -eva-3-hide-small -eva-3-hide-medium']");
+    private final By mensajeConfirmacion = By.xpath("//h2[@class='chk-main-title -eva-3-hide-small -eva-3-hide-medium']");
 
     private final By recorridoPlaneado = By.xpath("//div[@class='dm-title-container']");
 
@@ -103,7 +103,7 @@ public class DespegarPage extends CommonActionOnpages {
 
     }
 
-    public void originDaysSelection (){
+    public void originDaysSelection () {
         click(ciudadOrigen);
         clearText(ciudadOrigen);
         typeInto(ciudadOrigen, despegarModel.getOrigen());
@@ -118,7 +118,7 @@ public class DespegarPage extends CommonActionOnpages {
             waitGeneral(locatorDestino);
             click(locatorDestino);
 
-        }catch (Exception e){
+        } catch (Exception e) {
             LOGGER.info(e.getMessage());
             click(ciudadDestino);
             clearText(ciudadDestino);
@@ -136,7 +136,7 @@ public class DespegarPage extends CommonActionOnpages {
         click(botonSeleccionar);
         try {
             click(botonContinuar);
-        }catch (Exception e){
+        } catch (Exception e) {
             LOGGER.info(e.getMessage());
         }
 
@@ -148,7 +148,7 @@ public class DespegarPage extends CommonActionOnpages {
         try {
             click(tipoEquipaje);
             click(botonContinuar);
-        }catch (Exception e){
+        } catch (Exception e) {
             LOGGER.info(e.getMessage());
         }
 

@@ -8,29 +8,27 @@ public class BaseSikulix {
 
     private static final Logger LOGGER = Logger.getLogger(BaseSikulix.class);
 
-    public BaseSikulix() {
+    public BaseSikulix () {
         //Constructor by default.
     }
 
-    protected void click(String path){
+    protected void click (String path) {
         Screen s = new Screen();
 
-        try{
+        try {
             s.wait(path);
             s.click(path);
-        }
-        catch(FindFailed e){
+        } catch (FindFailed e) {
             LOGGER.warn(e.getMessage(), e);
         }
     }
 
-    protected void typeInto(String path, String text){
+    protected void typeInto (String path, String text) {
         Screen s = new Screen();
-        try{
+        try {
             s.wait(path);
             s.write(text);
-        }
-        catch(FindFailed e){
+        } catch (FindFailed e) {
             LOGGER.warn(e.getMessage(), e);
         }
     }

@@ -16,18 +16,17 @@ import java.util.List;
 public class DespegarStepDefinition extends WebUI {
 
     private static final Logger LOGGER = Logger.getLogger(DespegarStepDefinition.class);
-    private static final String MESSAGE_OK ="PROCESO EXITOSO";
+    private static final String MESSAGE_OK = "PROCESO EXITOSO";
     private static final String MESSAGE_ERROR_OPEN = "Error Iniciando la página despegar.com ";
-    private static final String MESSAGE_ERROR_SEARCH_FLY ="Error en la busqueda del vuelo";
-    private static final String MESSAGE_ERROR_SELECT_FLY ="Error seleccionando la información /llenado";
-    private static final String MESSAGE_ERROR_COMPARATION="Error comparando la información";
+    private static final String MESSAGE_ERROR_SEARCH_FLY = "Error en la busqueda del vuelo";
+    private static final String MESSAGE_ERROR_SELECT_FLY = "Error seleccionando la información /llenado";
+    private static final String MESSAGE_ERROR_COMPARATION = "Error comparando la información";
 
     private DespegarModel despegarModelBogota;
     private DespegarPage despegarPageBogota;
 
     private DespegarModel despegarModelBarranquilla;
     private DespegarPage despegarPageBarranquilla;
-
 
 
     @Given("el cliente se encuentra en la url de la página de despegar.com en la sección de vuelos")
@@ -81,7 +80,7 @@ public class DespegarStepDefinition extends WebUI {
             LOGGER.warn(e.getMessage());
             quiteDriver();
             Assertions.fail(MESSAGE_ERROR_COMPARATION);
-        }finally {
+        } finally {
             quiteDriver();
         }
 
@@ -116,9 +115,9 @@ public class DespegarStepDefinition extends WebUI {
 
     @When("el cliente escoge el vuelo, indica su equipaje adicional")
     public void elClienteEscogeElVueloIndicaSuEquipajeAdicional () {
-        try{
+        try {
             despegarPageBarranquilla.selectTicketBarranquilla();
-        }catch (Exception e){
+        } catch (Exception e) {
             LOGGER.warn(e.getMessage());
             quiteDriver();
             Assertions.fail(MESSAGE_ERROR_SELECT_FLY);
@@ -129,14 +128,14 @@ public class DespegarStepDefinition extends WebUI {
 
     @Then("el cliete debería ver un mensaje de falta poco y el lugar de origen-destino")
     public void elClieteDeberiaVerUnMensajeDeFaltaPocoYElLugarDeOrigenDestino () {
-        try{
-       Assertions.assertEquals(despegarPageBarranquilla.messageResult(), ResultExpectBarranquilla(),"");
+        try {
+            Assertions.assertEquals(despegarPageBarranquilla.messageResult(), ResultExpectBarranquilla(), "");
             LOGGER.info(MESSAGE_OK);
-        }catch (Exception e) {
+        } catch (Exception e) {
             LOGGER.warn(e.getMessage());
             quiteDriver();
             Assertions.fail(MESSAGE_ERROR_COMPARATION);
-        }finally {
+        } finally {
             quiteDriver();
         }
 
@@ -156,7 +155,7 @@ public class DespegarStepDefinition extends WebUI {
         despegarModelBogota.setDireccion("Diagonal 76 DD 4-55 BL 56-103");
     }
 
-    private void generateFly(){
+    private void generateFly () {
         despegarModelBarranquilla = new DespegarModel();
         despegarModelBarranquilla.setOrigen(" Medellin");
         despegarModelBarranquilla.setDestino(" Barranquilla");

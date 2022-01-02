@@ -8,7 +8,22 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../RetoPomPageFactory/src/main/java/co/com/sofka/page/ZonaFitPage.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../RetoPomPageFactory/src/main/java/co/com/sofka/page/common/CommonActionOnpages.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../RetoPomPageFactory/src/test/java/co/com/sofka/runner/ZonaFitTestCucumber.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../RetoPomPageFactory/src/test/java/co/com/sofka/stepdefinition/ZonaFitTestStepDefinitions.java">
           <value>
             <set />
           </value>
@@ -38,6 +53,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/co/com/sofka/page/common/BaseSikulix.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/co/com/sofka/page/common/CommonActionOnpages.java">
           <value>
             <set />
@@ -59,6 +79,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/co/com/sofka/util/LimitTimeWait.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/co/com/sofka/util/Log4jValues.java">
           <value>
             <set />
           </value>
@@ -89,6 +114,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/test/resources/features/despegar.feature">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/test/resources/log4j.properties">
           <value>
             <set />
           </value>

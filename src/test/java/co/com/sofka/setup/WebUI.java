@@ -15,32 +15,32 @@ public class WebUI {
 
     protected WebDriver driver;
 
-    private void setUpWebdriver(){
-        System.setProperty(WEBDRIVER_CHROME_DRIVER,WEBDRIVER_CHROME_DRIVER_PATH);
+    private void setUpWebdriver () {
+        System.setProperty(WEBDRIVER_CHROME_DRIVER, WEBDRIVER_CHROME_DRIVER_PATH);
     }
 
-    private void setUpWebdriverUrl(){
-        driver= new ChromeDriver();
+    private void setUpWebdriverUrl () {
+        driver = new ChromeDriver();
         driver.get(DEMO_QA_URL);
         maximize();
     }
 
-    protected void generalSetUp() {
+    protected void generalSetUp () {
         setUplog4j();
         setUpWebdriver();
         setUpWebdriverUrl();
     }
 
-    protected void quiteDriver(){
+    protected void quiteDriver () {
         driver.quit();
     }
 
-    private void maximize(){
+    private void maximize () {
         driver.manage().window().maximize();
 
     }
 
-    private void setUplog4j(){
+    private void setUplog4j () {
         PropertyConfigurator.configure(USER_DIR.value() + LOG4J_PROPERTIES_FILE_PATH.getValue());
     }
 }
